@@ -5,6 +5,10 @@ Use the Image Authentication SDK from MyDesign99 on your server to build fully f
 
 > **To be used on your Python or Django server**
 
+## Link to the python package index (PyPI)
+
+[pypi.org/project/md99authtoken/1.1.1/](https://pypi.org/project/md99authtoken/1.1.1/)
+
 ## Example
 
 Suppose you have a server that maintains a database of high school student grades. You can pass a StudentID to your server, calculate the student's grade average, and return a full URL for the grade and the correct data graphic. Your own data graphics are called "assets" on MyDesign99.
