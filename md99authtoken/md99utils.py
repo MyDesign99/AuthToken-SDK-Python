@@ -1,3 +1,5 @@
+#  Copyright (c) 2025 MyDesign99 LLC
+
 import base64
 import json
 import hmac
