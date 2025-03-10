@@ -1,3 +1,5 @@
+#  Copyright (c) 2025 MyDesign99 LLC
+
 from . import md99utils
 import logging
 from urllib import request, parse
