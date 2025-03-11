@@ -3,6 +3,8 @@
 
 Use the Image Authentication SDK from MyDesign99 on your server to build fully formatted URL's for your MyDesign99 images.
 
+![MyDesign99 logo](logo.png "MyDesign99 logo")
+
 > **To be used on your Python or Django server**
 
 ## Link to the python package index (PyPI)
@@ -69,5 +71,3 @@ To use it in a Python script or interactive shell:
 ```
 from md99authtoken import md99authtoken
 ```
-
-
