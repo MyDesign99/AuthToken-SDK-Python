@@ -9,7 +9,7 @@ Use the Image Authentication SDK from MyDesign99 on your server to build fully f
 
 ## Link to the python package index (PyPI)
 
-[pypi.org/project/md99authtoken/1.1.1/](https://pypi.org/project/md99authtoken/1.1.1/)
+[pypi.org/project/md99authtoken/1.1.2/](https://pypi.org/project/md99authtoken/1.1.2/)
 
 ## OVERVIEW
 
@@ -36,12 +36,6 @@ assetName = "radial-wedges"
 # call the MD99 SDK
 imageUrl = md99authtoken.processAll (publicKey, secretKey, score, assetName)
 ```
-
-## Use in conjunction with our Python Server Demo (md99demo)
-
-The MyDesign99 Python server demo (md99demo) responds to 2 different URLS to create an authenticated MD99 image URL. URL #1 contains the "value" and "asset_name" in the full URL. URL #2 uses POST parameters "value" and "asset_name". 
-
-The demo uses this SDK package to communicate with the MyDesign99 servers. 
 
 ## USAGE
 
@@ -82,3 +76,11 @@ To use it in a Python script or interactive shell:
 ```
 from md99authtoken import md99authtoken
 ```
+
+## Use in conjunction with our Python Server Demo
+
+Check out our Python/Django Server Demo on Github
+
+[github.com/MyDesign99/Server-Demo-Python](https://github.com/MyDesign99/Server-Demo-Python)
+
+
