@@ -39,9 +39,9 @@ def getMD99AuthToken (publicKey, secretKey):
     return token
 
 # ------- Function: main entry point into this module -----------
-def createImageURL (clientID, token, value, assetName):
-    if type(clientID) != 'str':
-        clientID = str (clientID)
+def createImageURL (publicKey, token, value, assetName):
+    if type(publicKey) != 'str':
+        publicKey = str (publicKey)
     if type(token) != 'str':
         token = str (token)
     if type(value) != 'str':
@@ -51,7 +51,7 @@ def createImageURL (clientID, token, value, assetName):
         
     assetName = md99utils.stripAssetName (assetName)
     
-    imgUrl = gRemoteDomain + "get/" + clientID + "/" + token + "/" + value + "/" + assetName + ".png"
+    imgUrl = gRemoteDomain + "get/" + publicKey + "/" + token + "/" + value + "/" + assetName + ".png"
     return imgUrl
 
 # ------- Function: main entry point into this module -----------

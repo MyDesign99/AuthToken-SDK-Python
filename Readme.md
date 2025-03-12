@@ -11,6 +11,17 @@ Use the Image Authentication SDK from MyDesign99 on your server to build fully f
 
 [pypi.org/project/md99authtoken/1.1.1/](https://pypi.org/project/md99authtoken/1.1.1/)
 
+## OVERVIEW
+
+MyDesign99 requires that image requests use authenticated tokens in the fully-formed URL as a part of your own designs and websites. This SDK is used to retrieve the latest token for your account and to format the URL.
+
+Example:
+```
+https://mydesign99.com/abcd1234/wxyz5678asdf9876/78/first-asset.png
+```
+
+The normal usage of the SDK is to have it embedded on your own server.  Then you would use your own database to retrieve values and the SDK to retrieve an Auth Token. MyDesign99 provides you with a Public Key and a Secret Key. Through your MD99 account, you can create custom designs (graphics). The combination of Public Key, Auth Token, Value, and Asset Name will form a valid URL for an **img** tag to be placed on your own web pages, reports or PDF files.
+
 ## Example
 
 Suppose you have a server that maintains a database of high school student grades. You can pass a StudentID to your server, calculate the student's grade average, and return a full URL for the grade and the correct data graphic. Your own data graphics are called "assets" on MyDesign99.
@@ -40,7 +51,7 @@ There are 4 function in this SDK package.
 
 ```
 getMD99AuthToken (publicKey, secretKey)
-createImageURL   (clientID, token, value, assetName)
+createImageURL   (publicKey, token, value, assetName)
 errorImageURL    ()
 processAll       (publicKey, secretKey, value, assetName)
 ```
@@ -48,8 +59,8 @@ processAll       (publicKey, secretKey, value, assetName)
 getMD99AuthToken (publicKey, secretKey)
 > Request the current authentication token. The developer's public and secret keys are required.
 
-createImageURL (clientID, token, value, assetName)
-> Create a well-formed URL for the requested image. "clientID" is the publicKey. "token" is retrieved using the "getMD99AuthToken" function. "value" is the numeric value to be displayed in the MD99 graphic. "assetName" is the name of the developer's MD99 asset (graphic) to be displayed.
+createImageURL (publicKey, token, value, assetName)
+> Create a well-formed URL for the requested image. "publicKey" can be found in the MD99 portal. "token" is retrieved using the "getMD99AuthToken" function. "value" is the numeric value to be displayed in the MD99 graphic. "assetName" is the name of the developer's MD99 asset (graphic) to be displayed.
 
 errorImageURL ()
 > Create a well-formed URL for the standard MD99 error image.
